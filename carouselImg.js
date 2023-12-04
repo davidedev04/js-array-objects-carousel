@@ -47,8 +47,9 @@ function carouselImg() {
         const img = document.createElement('img');
         img.src = element.image;
 
-        const title = document.createElement('h2');
-        title.textContent = element.title;
+        const titleCard = document.createElement('h3');
+        titleCard.textContent = element.title;
+        
 
         const text = document.createElement('p');
         text.textContent = element.text;
