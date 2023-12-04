@@ -42,17 +42,19 @@ function carouselImg() {
     images.forEach(element => {
 
         const card = document.createElement('div');
-        card.classList.add('card');
+        card.classList.add('img_container');
 
         const img = document.createElement('img');
         img.src = element.image;
+        img.classList.add('position-absolute');
 
-        const titleCard = document.createElement('h3');
-        titleCard.textContent = element.title;
-        
+        const title = document.createElement('h3');
+        title.textContent = element.title;
+        title.classList.add('position-relative');
 
         const text = document.createElement('p');
         text.textContent = element.text;
+        text.classList.add('position-relative');
 
         card.appendChild(img);
         card.appendChild(title);
@@ -61,6 +63,22 @@ function carouselImg() {
         imgCards.appendChild(card);
 
         /* return console.log(element.image, element.title, element.text); */
+
+    });
+
+    const buttonNext = document.querySelector(".button_next");
+
+    buttonNext.addEventListener("click", function () {
+
+        if (imgItem < images.length - 1) {
+
+            imgCards[imgItem].classList.remove("active");
+
+            imgItem++;
+
+            imgCards[imgItem].classList.add("active");
+
+        }
 
     });
 
