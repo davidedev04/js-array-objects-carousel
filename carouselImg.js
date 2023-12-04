@@ -1,6 +1,6 @@
-let imgCards = document.getElementsByClassName("img_card");
 
-let imgItem = 0;
+
+
 
 // serie di oggetti
 const images = [
@@ -35,14 +35,39 @@ const images = [
     }
 ];
 
+function carouselImg() {
 
-const scrollImg = images.map((element) => {
+    const imgCards = document.getElementById("img_card");
 
-    return console.log(element.image, element.title, element.text);
+    images.forEach(element => {
 
-});
+        const card = document.createElement('div');
+        card.classList.add('card');
 
+        const img = document.createElement('img');
+        img.src = element.image;
 
+        const title = document.createElement('h2');
+        title.textContent = element.title;
+
+        const text = document.createElement('p');
+        text.textContent = element.text;
+
+        card.appendChild(img);
+        card.appendChild(title);
+        card.appendChild(text);
+
+        imgCards.appendChild(card);
+
+        /* return console.log(element.image, element.title, element.text); */
+
+    });
+
+}
+
+carouselImg();
+
+let imgItem = 0;
 
 // funzione bottone sotto
 const buttonNext = document.querySelector(".button_next");
