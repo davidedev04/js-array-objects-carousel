@@ -1,0 +1,44 @@
+img{
+    width: 100%;
+    height: 330px;
+}
+
+#centre{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_container{
+    width: 600px;
+    height: 330px;
+}
+
+.img_card{
+    display: none;
+}
+
+.buttons{
+    width: 100%;
+    height: 100%;
+}
+
+.background_c{
+    background-color: #ffffff42;
+}
+
+.button_next:hover{
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.button_next1:hover{
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.active{
+    display: block;
+}
